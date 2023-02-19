@@ -8,17 +8,16 @@
     }
   },
   "core": {
-    "connectionString": "{DATABASE_URL}"
+    "connectionString": "{DATABASE_URL}",
+    "graphql": true,
+    "openapi": true
   },
   "migrations": {
     "dir": "migrations",
     "autoApply": true
   },
   "plugin": {
-    "path": "plugin.ts",
-    "typescript": {
-      "outDir": "dist"
-    }
+    "path": "plugin.js"
   },
   "types": {
     "autogenerate": true

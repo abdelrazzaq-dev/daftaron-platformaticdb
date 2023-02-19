@@ -3,7 +3,7 @@
  * A Member
  */
 declare interface Member {
-    memberId?: number;
+    id?: number;
     firstName: string;
     lastName: string;
     fatherName: string;

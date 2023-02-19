@@ -302,9 +302,9 @@
         {
           "type": "object",
           "properties": {
-            "rootPath": {
-              "type": "boolean",
-              "description": "Whether the dashboard should be served on / path or not."
+            "path": {
+              "type": "string",
+              "description": "The path where the dashboard should be served."
             }
           },
           "additionalProperties": false
@@ -377,37 +377,77 @@
           "type": "array",
           "items": {
             "type": "object",
-            "properties": {
-              "role": {
-                "type": "string",
-                "description": "the role name to match the rule"
-              },
-              "entity": {
-                "type": "string",
-                "description": "the DB entity type to which the rule applies"
-              },
-              "defaults": {
+            "oneOf": [
+              {
                 "type": "object",
-                "description": "defaults for entity creation",
-                "additionalProperties": {
-                  "type": "string"
-                }
+                "properties": {
+                  "entity": {
+                    "type": "string",
+                    "description": "the DB entity type to which the rule applies"
+                  },
+                  "role": {
+                    "type": "string",
+                    "description": "the role name to match the rule"
+                  },
+                  "defaults": {
+                    "type": "object",
+                    "description": "defaults for entity creation",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "find": {
+                    "$ref": "#crud-operation-auth"
+                  },
+                  "save": {
+                    "$ref": "#crud-operation-auth"
+                  },
+                  "delete": {
+                    "$ref": "#crud-operation-auth"
+                  }
+                },
+                "required": [
+                  "role"
+                ],
+                "additionalProperties": false
               },
-              "find": {
-                "$ref": "#crud-operation-auth"
-              },
-              "save": {
-                "$ref": "#crud-operation-auth"
-              },
-              "delete": {
-                "$ref": "#crud-operation-auth"
+              {
+                "type": "object",
+                "properties": {
+                  "entities": {
+                    "type": "array",
+                    "description": "the DB entity types to which the rule applies",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "role": {
+                    "type": "string",
+                    "description": "the role name to match the rule"
+                  },
+                  "defaults": {
+                    "type": "object",
+                    "description": "defaults for entity creation",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "find": {
+                    "$ref": "#crud-operation-auth"
+                  },
+                  "save": {
+                    "$ref": "#crud-operation-auth"
+                  },
+                  "delete": {
+                    "$ref": "#crud-operation-auth"
+                  }
+                },
+                "required": [
+                  "role"
+                ],
+                "additionalProperties": false
               }
-            },
-            "required": [
-              "role",
-              "entity"
-            ],
-            "additionalProperties": false
+            ]
           }
         }
       },
