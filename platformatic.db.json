@@ -10,7 +10,8 @@
   "core": {
     "connectionString": "{DATABASE_URL}",
     "graphql": true,
-    "openapi": true
+    "openapi": true,
+    "graphiql": true
   },
   "migrations": {
     "dir": "migrations",
