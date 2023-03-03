@@ -4,8 +4,9 @@
  */
 declare interface Meter {
     id?: number;
-    serialId: string;
     label: string;
+    serialId: string;
+    memberId: number;
     connectedAddress: string;
     connectedAt?: string | null;
     createdAt?: string | null;

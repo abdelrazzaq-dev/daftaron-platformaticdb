@@ -9,10 +9,12 @@ CREATE SEQUENCE IF NOT EXISTS meters_id_seq
 -- CREATE METERS TABLE
 CREATE TABLE IF NOT EXISTS meters (
     id INTEGER PRIMARY KEY DEFAULT nextval('meters_id_seq'),
-    serial_id TEXT NOT NULL,
     label TEXT NOT NULL,
+    serial_id TEXT NOT NULL,
+    member_id INTEGER NOT NULL,
     connected_address TEXT NOT NULL,
     connected_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (member_id) REFERENCES members(id)
 );
