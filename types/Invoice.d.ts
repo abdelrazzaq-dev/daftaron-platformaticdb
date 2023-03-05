@@ -7,6 +7,7 @@ declare interface Invoice {
     invoiceDate: string;
     meterId: number;
     rateId: number;
+    memberId: number;
     previousReadingId: number;
     currentReadingId: number;
     invoiceAmount: number;
