@@ -22,5 +22,20 @@
   },
   "types": {
     "autogenerate": true
+  },
+  "authorization": {
+    "jwt": {
+      "secret": "{PLT_AUTHORIZATION_JWT_SECRET}"
+    },
+    "rules": [
+      {
+        "role": "admin",
+        "entities": ["member", "meter", "reading", "invoice", "payment", "rate"],
+        "find": true,
+        "save": true,
+        "delete": true
+      }
+    ]
+    
   }
 }
