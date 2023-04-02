@@ -1,17 +1,27 @@
-import { Member } from './Member'
+import { InactiveMeterPayment } from './InactiveMeterPayment'
+import { Customer } from './Customer'
 import { Meter } from './Meter'
 import { Reading } from './Reading'
-import { Invoice } from './Invoice'
-import { Rate } from './Rate'
-import { Payment } from './Payment'
+import { BillingPeriod } from './BillingPeriod'
+import { WaterInvoice } from './WaterInvoice'
+import { WaterPayment } from './WaterPayment'
+import { InactiveMeterCharge } from './InactiveMeterCharge'
+import { ShartInvoice } from './ShartInvoice'
+import { ShartInvoiceItem } from './ShartInvoiceItem'
+import { ShartPayment } from './ShartPayment'
   
   interface EntityTypes  {
-    Member:Member
+    InactiveMeterPayment:InactiveMeterPayment
+    Customer:Customer
     Meter:Meter
     Reading:Reading
-    Invoice:Invoice
-    Rate:Rate
-    Payment:Payment
+    BillingPeriod:BillingPeriod
+    WaterInvoice:WaterInvoice
+    WaterPayment:WaterPayment
+    InactiveMeterCharge:InactiveMeterCharge
+    ShartInvoice:ShartInvoice
+    ShartInvoiceItem:ShartInvoiceItem
+    ShartPayment:ShartPayment
   }
   
-  export { EntityTypes ,Member,Meter,Reading,Invoice,Rate,Payment }
+  export { EntityTypes ,InactiveMeterPayment,Customer,Meter,Reading,BillingPeriod,WaterInvoice,WaterPayment,InactiveMeterCharge,ShartInvoice,ShartInvoiceItem,ShartPayment }

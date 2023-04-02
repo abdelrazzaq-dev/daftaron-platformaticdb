@@ -3,14 +3,12 @@
  * A Meter
  */
 declare interface Meter {
-    id?: number;
-    label: string;
-    serialId: string;
-    memberId: number;
-    connectedAddress: string;
-    connectedAt?: string | null;
-    createdAt?: string | null;
-    updatedAt?: string | null;
+    meterId?: number;
+    customerId: number;
+    serialNumber: string;
+    status: string;
+    installationDate: string;
+    installationAddress: string;
 }
 
 export { Meter };

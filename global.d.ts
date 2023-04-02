@@ -1,10 +1,10 @@
 import { Entity } from '@platformatic/sql-mapper';
 import graphqlPlugin from '@platformatic/sql-graphql'
-import { EntityTypes, Member,Meter,Reading,Invoice,Rate,Payment } from './types'
+import { EntityTypes, InactiveMeterPayment,Customer,Meter,Reading,BillingPeriod,WaterInvoice,WaterPayment,InactiveMeterCharge,ShartInvoice,ShartInvoiceItem,ShartPayment } from './types'
 
 declare module 'fastify' {
   interface FastifyInstance {
-    getSchema<T extends 'Member' | 'Meter' | 'Reading' | 'Invoice' | 'Rate' | 'Payment'>(schemaId: T): {
+    getSchema<T extends 'InactiveMeterPayment' | 'Customer' | 'Meter' | 'Reading' | 'BillingPeriod' | 'WaterInvoice' | 'WaterPayment' | 'InactiveMeterCharge' | 'ShartInvoice' | 'ShartInvoiceItem' | 'ShartPayment'>(schemaId: T): {
       '$id': string,
       title: string,
       description: string,
@@ -19,11 +19,16 @@ declare module 'fastify' {
 
 declare module '@platformatic/sql-mapper' {
   interface Entities {
-    member: Entity<Member>,
+    inactiveMeterPayment: Entity<InactiveMeterPayment>,
+    customer: Entity<Customer>,
     meter: Entity<Meter>,
     reading: Entity<Reading>,
-    invoice: Entity<Invoice>,
-    rate: Entity<Rate>,
-    payment: Entity<Payment>,
+    billingPeriod: Entity<BillingPeriod>,
+    waterInvoice: Entity<WaterInvoice>,
+    waterPayment: Entity<WaterPayment>,
+    inactiveMeterCharge: Entity<InactiveMeterCharge>,
+    shartInvoice: Entity<ShartInvoice>,
+    shartInvoiceItem: Entity<ShartInvoiceItem>,
+    shartPayment: Entity<ShartPayment>,
   }
 }

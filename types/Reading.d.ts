@@ -3,12 +3,11 @@
  * A Reading
  */
 declare interface Reading {
-    id?: number;
-    meterId?: number | null;
+    readingId?: number;
+    meterId: number;
+    periodId: number;
+    readingDate: string;
     readingValue: number;
-    readingDate?: string | null;
-    createdAt?: string | null;
-    updatedAt?: string | null;
 }
 
 export { Reading };
