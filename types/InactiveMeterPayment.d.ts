@@ -3,11 +3,10 @@
  * A InactiveMeterPayment
  */
 declare interface InactiveMeterPayment {
-    paymentId?: number;
+    id?: number;
     chargeId: number;
     periodId: number;
     paymentDate: string;
     paymentAmount: number;
 }
-
 export { InactiveMeterPayment };

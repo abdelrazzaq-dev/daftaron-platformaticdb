@@ -3,9 +3,8 @@
  * A BillingPeriod
  */
 declare interface BillingPeriod {
-    periodId?: number;
+    id?: number;
     startDate: string;
     endDate: string;
 }
-
 export { BillingPeriod };

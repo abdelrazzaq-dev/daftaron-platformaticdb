@@ -3,11 +3,10 @@
  * A ShartPayment
  */
 declare interface ShartPayment {
-    paymentId?: number;
+    id?: number;
     invoiceId: number;
     periodId: number;
     paymentDate: string;
     paymentAmount: number;
 }
-
 export { ShartPayment };

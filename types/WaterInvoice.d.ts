@@ -3,7 +3,7 @@
  * A WaterInvoice
  */
 declare interface WaterInvoice {
-    invoiceId?: number;
+    id?: number;
     meterId: number;
     periodId: number;
     customerId: number;
@@ -12,5 +12,4 @@ declare interface WaterInvoice {
     invoiceAmount: number;
     paymentStatus: string;
 }
-
 export { WaterInvoice };

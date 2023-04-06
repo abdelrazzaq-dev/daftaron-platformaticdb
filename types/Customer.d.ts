@@ -3,7 +3,7 @@
  * A Customer
  */
 declare interface Customer {
-    customerId?: number;
+    id?: number;
     firstName: string;
     lastName: string;
     fatherName: string;
@@ -12,5 +12,4 @@ declare interface Customer {
     sex: string;
     address: string;
 }
-
 export { Customer };

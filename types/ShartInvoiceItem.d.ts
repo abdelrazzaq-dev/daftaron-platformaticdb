@@ -3,10 +3,9 @@
  * A ShartInvoiceItem
  */
 declare interface ShartInvoiceItem {
-    itemId?: number;
+    id?: number;
     invoiceId: number;
     itemName: string;
     itemAmount: number;
 }
-
 export { ShartInvoiceItem };

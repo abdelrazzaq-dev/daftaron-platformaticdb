@@ -3,11 +3,10 @@
  * A Reading
  */
 declare interface Reading {
-    readingId?: number;
+    id?: number;
     meterId: number;
     periodId: number;
     readingDate: string;
     readingValue: number;
 }
-
 export { Reading };
