@@ -77,7 +77,7 @@ CREATE TABLE shart_invoices (
     period_id INTEGER NOT NULL,
     customer_id INTEGER NOT NULL,
     invoice_date DATE NOT NULL,
-    total_amount NUMERIC(10, 2) NOT NULL,
+    invoice_amount NUMERIC(10, 2) NOT NULL,
     payment_status VARCHAR(50) NOT NULL,
     CONSTRAINT fk_customer_id FOREIGN KEY (customer_id) REFERENCES customers (id),
     CONSTRAINT fk_period_id FOREIGN KEY (period_id) REFERENCES billing_periods (id)
