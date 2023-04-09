@@ -1,5 +1,5 @@
 {
-  "$schema": "./platformatic.db.schema.json",
+  "$schema": "https://platformatic.dev/schemas/v0.19.0/db",
   "server": {
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
@@ -10,35 +10,44 @@
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
     }
   },
-  "core": {
-    "connectionString": "{DATABASE_URL}",
-    "graphql": true,
-    "openapi": true,
-    "graphiql": true
-  },
   "migrations": {
     "dir": "migrations",
     "autoApply": true
-  },
-  "plugin": {
-    "path": "plugin.js"
   },
   "types": {
     "autogenerate": true
   },
   "authorization": {
-    "jwt": {
-      "secret": "{PLT_AUTHORIZATION_JWT_SECRET}"
-    },
+    "adminSecret": "{PLT_AUTHORIZATION_ADMIN_SECRET}",
     "rules": [
       {
         "role": "admin",
-        "entities": ["member", "meter", "reading", "invoice", "payment", "rate"],
+        "entities": [
+          "customer",
+          "meter",
+          "reading",
+          "billingPeriod",
+          "waterInvoice",
+          "waterPayment",
+          "waterInvoiceItem",
+          "shartInvoice",
+          "shartPayment"
+        ],
         "find": true,
         "save": true,
         "delete": true
       }
     ]
-    
+  },
+  "plugins": {
+    "paths": [
+      "plugin.js"
+    ]
+  },
+  "db": {
+    "connectionString": "{PLT_DATABASE_CONNECTION_STRING}",
+    "graphql": true,
+    "openapi": true,
+    "graphiql": true
   }
 }
