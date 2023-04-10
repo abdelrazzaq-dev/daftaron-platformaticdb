@@ -4,7 +4,7 @@
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
     "cors": {
-      "origin": "{PLT_SERVER_CORS_ORIGIN}"
+      "origin": "{CORS_ORIGIN}"
     },
     "logger": {
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
@@ -18,7 +18,7 @@
     "autogenerate": true
   },
   "authorization": {
-    "adminSecret": "{PLT_AUTHORIZATION_ADMIN_SECRET}",
+    "adminSecret": "{ADMIN_SECRET}",
     "rules": [
       {
         "role": "admin",
@@ -45,7 +45,7 @@
     ]
   },
   "db": {
-    "connectionString": "{PLT_DATABASE_CONNECTION_STRING}",
+    "connectionString": "{DATABASE_URL}",
     "graphql": true,
     "openapi": true,
     "graphiql": true
