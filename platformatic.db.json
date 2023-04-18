@@ -39,9 +39,7 @@
     ]
   },
   "plugins": {
-    "paths": [
-      "plugin.js"
-    ]
+    "paths": ["./plugins/index.js"]
   },
   "db": {
     "connectionString": "{DATABASE_URL}",
