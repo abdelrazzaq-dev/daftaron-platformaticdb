@@ -3,6 +3,9 @@
   "server": {
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
+    "cors": {
+      "origin": ["{PLT_WEB_DOMAIN}", "{PLT_CLOUD_DOMAIN}"]
+    },
     "logger": {
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
     }
