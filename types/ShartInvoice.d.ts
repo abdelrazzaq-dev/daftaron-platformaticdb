@@ -7,7 +7,7 @@ declare interface ShartInvoice {
     periodId: number;
     customerId: number;
     invoiceDate: string;
-    invoiceAmount: number;
+    invoiceAmount: string;
     paymentStatus: string;
 }
 export { ShartInvoice };

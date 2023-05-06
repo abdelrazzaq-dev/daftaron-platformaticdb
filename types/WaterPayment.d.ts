@@ -7,6 +7,6 @@ declare interface WaterPayment {
     periodId: number;
     invoiceId: number;
     paymentDate: string;
-    paymentAmount: number;
+    paymentAmount: string;
 }
 export { WaterPayment };

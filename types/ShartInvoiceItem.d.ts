@@ -6,6 +6,6 @@ declare interface ShartInvoiceItem {
     id?: number;
     invoiceId: number;
     itemName: string;
-    itemAmount: number;
+    itemAmount: string;
 }
 export { ShartInvoiceItem };

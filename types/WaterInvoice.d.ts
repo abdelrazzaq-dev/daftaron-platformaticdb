@@ -8,8 +8,8 @@ declare interface WaterInvoice {
     periodId: number;
     customerId: number;
     invoiceDate: string;
-    invoiceAmount: number;
-    waterUnitPrice: number;
+    invoiceAmount: string;
+    waterUnitPrice: string;
     waterUnitCount: number;
     paymentStatus: string;
 }
