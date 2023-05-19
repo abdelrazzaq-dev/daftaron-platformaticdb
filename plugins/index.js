@@ -5,7 +5,7 @@
 module.exports = async function (app) {
     const {db, sql} = app.platformatic
     async function getMonthlyWaterConsumption() {
-        const results = await db.query(sql`
+        return await db.query(sql`
             SELECT
                 DATE_TRUNC('month', reading_date) AS month,
                 SUM(reading_value) AS total_consumption
@@ -16,8 +16,6 @@ module.exports = async function (app) {
             ORDER BY
                 month ASC;
         `)
-        
-        return results
     }
 
     app.get('/monthly-water-consumption', async function () {
