@@ -20,7 +20,7 @@ module.exports = async function (app) {
         return results
     }
 
-    app.get('/monthly-water-consumption', async function (request, reply) {
+    app.get('/monthly-water-consumption', async function () {
         return {data: await getMonthlyWaterConsumption()}
     })
 }
