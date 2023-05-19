@@ -25,8 +25,4 @@ module.exports = async function (app) {
         const {year} = req.params
         return {data: year}
     })
-    app.post('/pay-water-invoices', async function (req) {
-        const {amount} = req.body
-        return {data: amount}
-    })
 }
