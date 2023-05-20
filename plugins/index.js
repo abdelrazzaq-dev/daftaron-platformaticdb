@@ -21,4 +21,7 @@ module.exports = async function (app) {
     app.get('/monthly-water-consumption', async function () {
         return {data: await getMonthlyWaterConsumption()}
     })
+    app.get('/monthly-water-consumption/:year', async function (request) {
+        return {data: await getMonthlyWaterConsumption()}
+    })
 }
