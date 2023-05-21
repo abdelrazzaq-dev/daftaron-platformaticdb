@@ -1,27 +1,49 @@
 /// <reference path="../global.d.ts" />
-'use strict'
+"use strict";
 
 /** @param {import('fastify').FastifyInstance} app */
 module.exports = async function (app) {
-    const {db, sql} = app.platformatic
-    async function getMonthlyWaterConsumption() {
-        return await db.query(sql`
-            SELECT
-                DATE_TRUNC('month', reading_date) AS month,
-                SUM(reading_value) AS total_consumption
-            FROM
-                readings
-            GROUP BY
-                month
-            ORDER BY
-                month ASC;
-        `)
+  const { db, sql } = app.platformatic;
+
+  async function sumUnpaidWaterInvoices() {
+    const data = await db.query(sql`
+      SELECT
+        SUM(invoice_amount) AS total_unpaid
+      FROM
+        water_invoices
+      WHERE
+        payment_status = 'UNPAID';
+    `);
+    return data[0];
+  }
+
+  async function sumUnpaidShartInvoices() {
+    const data = await db.query(sql`
+      SELECT
+        SUM(invoice_amount) AS total_unpaid
+      FROM
+        shart_invoices
+      WHERE
+        payment_status = 'UNPAID';
+    `);
+    return data[0];
+  }
+
+  app.graphql.extendSchema(`
+    type TotalUnpaid {
+      total_unpaid: Float!
     }
 
-    app.get('/monthly-water-consumption', async function () {
-        return {data: await getMonthlyWaterConsumption()}
-    })
-    app.get('/monthly-water-consumption/:year', async function (request) {
-        return {data: await getMonthlyWaterConsumption()}
-    })
-}
+    extend type Query {
+      sumUnpaidWaterInvoices: TotalUnpaid!
+      sumUnpaidShartInvoices: TotalUnpaid!
+    }
+  `);
+
+  app.graphql.defineResolvers({
+    Query: {
+      sumUnpaidWaterInvoices,
+      sumUnpaidShartInvoices,
+    },
+  });
+};
