@@ -4,7 +4,9 @@
  */
 declare interface BillingPeriod {
     id?: number;
-    startDate: string;
-    endDate: string;
+    billingPeriodStart: string;
+    billingPeriodEnd: string;
+    createdAt: string;
+    updatedAt: string;
 }
 export { BillingPeriod };
