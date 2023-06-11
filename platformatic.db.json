@@ -1,10 +1,11 @@
 {
-  "$schema": "https://platformatic.dev/schemas/v0.19.0/db",
+  "$schema": "https://platformatic.dev/schemas/v0.26.1/db",
   "server": {
     "hostname": "{PLT_SERVER_HOSTNAME}",
     "port": "{PORT}",
     "cors": {
-      "origin": ["{PLT_WEB_DOMAIN}", "{PLT_CLOUD_DOMAIN}"]
+      "origin": ["{PLT_WEB_DOMAIN}", "{PLT_CLOUD_DOMAIN}"],
+      "exposedHeaders": "X-Total-Count"
     },
     "logger": {
       "level": "{PLT_SERVER_LOGGER_LEVEL}"
@@ -21,19 +22,12 @@
     "jwt": {
       "secret": "{PLT_JWT_SECRET}"
     },
+    "adminSecret": "{PLT_ADMIN_SECRET}",
     "rules": [
       {
         "role": "admin",
         "entities": [
-          "customer",
-          "meter",
-          "reading",
-          "billingPeriod",
-          "waterInvoice",
-          "waterPayment",
-          "waterInvoiceItem",
-          "shartInvoice",
-          "shartPayment"
+          "member"
         ],
         "find": true,
         "save": true,
