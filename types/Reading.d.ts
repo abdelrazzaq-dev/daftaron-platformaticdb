@@ -5,8 +5,9 @@
 declare interface Reading {
     id?: number;
     meterId: number;
-    periodId: number;
-    readingDate: string;
     readingValue: number;
+    readingDate: string;
+    createdAt: string;
+    updatedAt: string;
 }
 export { Reading };

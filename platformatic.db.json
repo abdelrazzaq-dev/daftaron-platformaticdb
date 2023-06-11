@@ -28,7 +28,8 @@
         "role": "admin",
         "entities": [
           "member",
-          "meter"
+          "meter",
+          "reading"
         ],
         "find": true,
         "save": true,
