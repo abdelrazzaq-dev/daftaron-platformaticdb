@@ -27,7 +27,8 @@
       {
         "role": "admin",
         "entities": [
-          "member"
+          "member",
+          "meter"
         ],
         "find": true,
         "save": true,
