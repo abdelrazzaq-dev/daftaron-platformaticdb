@@ -29,7 +29,8 @@
         "entities": [
           "member",
           "meter",
-          "reading"
+          "reading",
+          "service"
         ],
         "find": true,
         "save": true,
