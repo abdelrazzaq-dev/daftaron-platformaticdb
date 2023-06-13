@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS billings_periods;
+DROP TABLE IF EXISTS readings;

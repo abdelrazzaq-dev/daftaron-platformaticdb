@@ -30,7 +30,10 @@
           "member",
           "meter",
           "reading",
-          "service"
+          "service",
+          "invoice",
+          "invoiceItem",
+          "invoiceItemWater"
         ],
         "find": true,
         "save": true,

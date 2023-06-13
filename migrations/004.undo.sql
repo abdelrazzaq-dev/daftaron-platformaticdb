@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS readings;
+DROP TABLE IF EXISTS services;
