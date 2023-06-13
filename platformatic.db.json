@@ -33,7 +33,8 @@
           "service",
           "invoice",
           "invoiceItem",
-          "invoiceItemWater"
+          "invoiceItemWater",
+          "serviceSubscription"
         ],
         "find": true,
         "save": true,
