@@ -4,6 +4,7 @@
  */
 declare interface MeterSetting {
     id?: number;
+    name: string;
     unitPrice: string;
     connectionFee: string;
     maxConsumption: number;
