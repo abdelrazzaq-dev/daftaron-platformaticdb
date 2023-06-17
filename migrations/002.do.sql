@@ -1,5 +1,6 @@
 CREATE TABLE IF NOT EXISTS meter_settings (
     id INTEGER PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
     unit_price NUMERIC(10, 2) NOT NULL,
     connection_fee NUMERIC(10, 2) NOT NULL,
     max_consumption INTEGER NOT NULL,
