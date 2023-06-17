@@ -35,7 +35,8 @@
           "invoiceItem",
           "invoiceItemWater",
           "serviceSubscription",
-          "payment"
+          "payment",
+          "meterSetting"
         ],
         "find": true,
         "save": true,
