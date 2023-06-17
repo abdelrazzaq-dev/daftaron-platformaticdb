@@ -1,1 +1,2 @@
+DROP TABLE IF EXISTS meter_settings;
 DROP TABLE IF EXISTS meters;

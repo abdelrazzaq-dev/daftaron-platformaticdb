@@ -7,6 +7,7 @@ declare interface InvoiceItemWater {
     invoiceItemId: number;
     currentReadingId: number;
     previousReadingId?: number | null;
+    meterSettingId: number;
     createdAt: string;
     updatedAt: string;
 }

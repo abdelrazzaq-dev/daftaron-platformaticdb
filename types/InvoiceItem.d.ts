@@ -7,10 +7,8 @@ declare interface InvoiceItem {
     invoiceId: number;
     serviceId: number;
     itemName: string;
-    itemDescription: string;
     itemQuantity: number;
-    itemPrice: number;
-    itemTotal: number;
+    itemPrice: string;
     createdAt: string;
     updatedAt: string;
 }

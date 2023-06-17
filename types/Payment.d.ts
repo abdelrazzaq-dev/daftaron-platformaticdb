@@ -7,7 +7,7 @@ declare interface Payment {
     invoiceId: number;
     paymentDate: string;
     paymentHash: string;
-    paymentAmount: number;
+    paymentAmount: string;
     paymentMethod: string;
     paymentStatus: string;
     createdAt: string;

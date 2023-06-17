@@ -6,8 +6,7 @@ declare interface Service {
     id?: number;
     name: string;
     description: string;
-    pricePerUnit: string;
-    unit: string;
+    price: string;
     createdAt: string;
     updatedAt: string;
 }

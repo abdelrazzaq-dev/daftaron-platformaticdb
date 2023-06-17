@@ -1,23 +1,25 @@
-import { Reading } from './Reading'
-import { InvoiceItemWater } from './InvoiceItemWater'
-import { Member } from './Member'
-import { ServiceSubscription } from './ServiceSubscription'
-import { Service } from './Service'
-import { Payment } from './Payment'
-import { Meter } from './Meter'
 import { Invoice } from './Invoice'
+import { Meter } from './Meter'
+import { MeterSetting } from './MeterSetting'
+import { Reading } from './Reading'
 import { InvoiceItem } from './InvoiceItem'
+import { Service } from './Service'
+import { InvoiceItemWater } from './InvoiceItemWater'
+import { ServiceSubscription } from './ServiceSubscription'
+import { Payment } from './Payment'
+import { Member } from './Member'
   
   interface EntityTypes  {
-    Reading:Reading
-    InvoiceItemWater:InvoiceItemWater
-    Member:Member
-    ServiceSubscription:ServiceSubscription
-    Service:Service
-    Payment:Payment
-    Meter:Meter
     Invoice:Invoice
+    Meter:Meter
+    MeterSetting:MeterSetting
+    Reading:Reading
     InvoiceItem:InvoiceItem
+    Service:Service
+    InvoiceItemWater:InvoiceItemWater
+    ServiceSubscription:ServiceSubscription
+    Payment:Payment
+    Member:Member
   }
   
-  export { EntityTypes ,Reading,InvoiceItemWater,Member,ServiceSubscription,Service,Payment,Meter,Invoice,InvoiceItem }
+  export { EntityTypes ,Invoice,Meter,MeterSetting,Reading,InvoiceItem,Service,InvoiceItemWater,ServiceSubscription,Payment,Member }

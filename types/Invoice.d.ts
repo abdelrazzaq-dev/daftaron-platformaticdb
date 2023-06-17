@@ -4,13 +4,12 @@
  */
 declare interface Invoice {
     id?: number;
-    invoiceHash: string;
     memberId: number;
     payingMemberId: number;
+    invoiceHash: string;
+    invoiceStatus: string;
     invoiceDate: string;
     invoiceDueDate: string;
-    invoiceTotal: number;
-    invoiceStatus: string;
     createdAt: string;
     updatedAt: string;
 }

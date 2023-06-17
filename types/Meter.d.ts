@@ -6,7 +6,7 @@ declare interface Meter {
     id?: number;
     memberId: number;
     meterNo: string;
-    meterType: string;
+    meterSettingId: number;
     meterStatus: string;
     meterAddress: string;
     connectedAt: string;
