@@ -1,9 +1,9 @@
 /// <reference types="@platformatic/db" />
-import { EntityTypes, Invoice,InvoiceItem,InvoiceItemWater,Member,Meter,MeterSetting,Payment,Reading,Service,ServiceSubscription } from './types'
+import { EntityTypes, Invoice,InvoiceItem,InvoiceItemWater,Member,Meter,MeterSetting,Operation,Payment,Project,Reading,Service,ServiceSubscription } from './types'
 
 declare module 'fastify' {
   interface FastifyInstance {
-    getSchema<T extends 'Invoice' | 'InvoiceItem' | 'InvoiceItemWater' | 'Member' | 'Meter' | 'MeterSetting' | 'Payment' | 'Reading' | 'Service' | 'ServiceSubscription'>(schemaId: T): {
+    getSchema<T extends 'Invoice' | 'InvoiceItem' | 'InvoiceItemWater' | 'Member' | 'Meter' | 'MeterSetting' | 'Operation' | 'Payment' | 'Project' | 'Reading' | 'Service' | 'ServiceSubscription'>(schemaId: T): {
       '$id': string,
       title: string,
       description: string,
@@ -24,7 +24,9 @@ declare module '@platformatic/sql-mapper' {
     member: Entity<Member>,
     meter: Entity<Meter>,
     meterSetting: Entity<MeterSetting>,
+    operation: Entity<Operation>,
     payment: Entity<Payment>,
+    project: Entity<Project>,
     reading: Entity<Reading>,
     service: Entity<Service>,
     serviceSubscription: Entity<ServiceSubscription>,
