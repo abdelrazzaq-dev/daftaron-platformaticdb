@@ -4,13 +4,13 @@
  */
 declare interface Payment {
     id?: number;
+    createdAt: string;
     invoiceId: number;
+    paymentAmount: string;
     paymentDate: string;
     paymentHash: string;
-    paymentAmount: string;
     paymentMethod: string;
     paymentStatus: string;
-    createdAt: string;
     updatedAt: string;
 }
 export { Payment };

@@ -1,5 +1,4 @@
-import { Entity } from '@platformatic/sql-mapper';
-import graphqlPlugin from '@platformatic/sql-graphql'
+/// <reference types="@platformatic/db" />
 import { EntityTypes, Invoice,InvoiceItem,InvoiceItemWater,Member,Meter,MeterSetting,Payment,Reading,Service,ServiceSubscription } from './types'
 
 declare module 'fastify' {

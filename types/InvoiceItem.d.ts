@@ -4,12 +4,12 @@
  */
 declare interface InvoiceItem {
     id?: number;
-    invoiceId: number;
-    serviceId: number;
-    itemName: string;
-    itemQuantity: number;
-    itemPrice: string;
     createdAt: string;
+    invoiceId: number;
+    itemName: string;
+    itemPrice: string;
+    itemQuantity: number;
+    serviceId: number;
     updatedAt: string;
 }
 export { InvoiceItem };

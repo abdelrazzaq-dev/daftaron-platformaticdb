@@ -4,10 +4,10 @@
  */
 declare interface Service {
     id?: number;
-    name: string;
-    description: string;
-    price: string;
     createdAt: string;
+    description: string;
+    name: string;
+    price: string;
     updatedAt: string;
 }
 export { Service };

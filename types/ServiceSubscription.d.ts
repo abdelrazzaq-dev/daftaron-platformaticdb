@@ -4,11 +4,11 @@
  */
 declare interface ServiceSubscription {
     id?: number;
+    createdAt: string;
+    isActive: boolean;
     memberId: number;
     payingMemberId: number;
     serviceId: number;
-    isActive: boolean;
-    createdAt: string;
     updatedAt: string;
 }
 export { ServiceSubscription };

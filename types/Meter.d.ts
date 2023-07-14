@@ -4,13 +4,13 @@
  */
 declare interface Meter {
     id?: number;
+    connectedAt: string;
+    createdAt: string;
     memberId: number;
+    meterAddress: string;
     meterNo: string;
     meterSettingId: number;
     meterStatus: string;
-    meterAddress: string;
-    connectedAt: string;
-    createdAt: string;
     updatedAt: string;
 }
 export { Meter };

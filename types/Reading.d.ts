@@ -4,10 +4,10 @@
  */
 declare interface Reading {
     id?: number;
-    meterId: number;
-    readingValue: number;
-    readingDate: string;
     createdAt: string;
+    meterId: number;
+    readingDate: string;
+    readingValue: number;
     updatedAt: string;
 }
 export { Reading };

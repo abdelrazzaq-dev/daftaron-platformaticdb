@@ -3,10 +3,10 @@
     "start": "platformatic db start"
   },
   "devDependencies": {
-    "fastify": "^4.17.0"
+    "fastify": "^4.19.2"
   },
   "dependencies": {
-   "platformatic": "^0.26.1"
+   "platformatic": "^0.31.0"
   },
   "engines": {
    "node": "^16.17.0 || ^18.8.0 || >=19"

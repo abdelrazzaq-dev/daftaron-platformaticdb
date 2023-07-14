@@ -4,11 +4,11 @@
  */
 declare interface InvoiceItemWater {
     id?: number;
-    invoiceItemId: number;
-    currentReadingId: number;
-    previousReadingId?: number | null;
-    meterSettingId: number;
     createdAt: string;
+    currentReadingId: number;
+    invoiceItemId: number;
+    meterSettingId: number;
+    previousReadingId?: number | null;
     updatedAt: string;
 }
 export { InvoiceItemWater };

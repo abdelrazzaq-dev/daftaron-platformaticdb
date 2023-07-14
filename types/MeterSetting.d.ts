@@ -4,11 +4,11 @@
  */
 declare interface MeterSetting {
     id?: number;
+    connectionFee: string;
+    createdAt: string;
+    maxConsumption: number;
     name: string;
     unitPrice: string;
-    connectionFee: string;
-    maxConsumption: number;
-    createdAt: string;
     updatedAt: string;
 }
 export { MeterSetting };
