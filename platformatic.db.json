@@ -37,7 +37,8 @@
           "serviceSubscription",
           "payment",
           "meterSetting",
-          "project"
+          "project",
+          "operation"
         ],
         "find": true,
         "save": true,
