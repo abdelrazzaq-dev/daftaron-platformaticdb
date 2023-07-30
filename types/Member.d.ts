@@ -5,7 +5,7 @@
 declare interface Member {
     id?: number;
     address: string;
-    createdAt: string;
+    createdAt?: string | null;
     email: string;
     fatherName: string;
     firstName: string;
@@ -13,6 +13,6 @@ declare interface Member {
     lastName: string;
     phone: string;
     sex: string;
-    updatedAt: string;
+    updatedAt?: string | null;
 }
 export { Member };

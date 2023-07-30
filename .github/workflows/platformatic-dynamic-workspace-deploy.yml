@@ -58,7 +58,7 @@ jobs:
         env:
           DATABASE_URL: ${{ steps.create-branch.outputs.db_url}}/neondb
           PLT_SERVER_LOGGER_LEVEL: info
-          PORT: 3042
+          PORT: 3001
           PLT_SERVER_HOSTNAME: 127.0.0.1
           PLT_JWT_SECRET: 90D725DED39207A2A995BD860907F4CC70A7508E96BEC9C6C8C856A0AB74DEE1
           PLT_WEB_DOMAIN: \*

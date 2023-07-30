@@ -4,9 +4,9 @@
  */
 declare interface Project {
     id?: number;
-    createdAt: string;
+    createdAt?: string | null;
     description: string;
     name: string;
-    updatedAt: string;
+    updatedAt?: string | null;
 }
 export { Project };

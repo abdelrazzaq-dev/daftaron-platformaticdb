@@ -5,10 +5,10 @@
 declare interface MeterSetting {
     id?: number;
     connectionFee: string;
-    createdAt: string;
+    createdAt?: string | null;
     maxConsumption: number;
     name: string;
     unitPrice: string;
-    updatedAt: string;
+    updatedAt?: string | null;
 }
 export { MeterSetting };

@@ -4,7 +4,7 @@
  */
 declare interface Operation {
     id?: number;
-    createdAt: string;
+    createdAt?: string | null;
     operationAmount: string;
     operationDate: string;
     operationDescription: string;
@@ -12,6 +12,6 @@ declare interface Operation {
     operationStatus: string;
     operationType: "EXPENSE" | "INCOME";
     projectId: number;
-    updatedAt: string;
+    updatedAt?: string | null;
 }
 export { Operation };

@@ -28,10 +28,10 @@ jobs:
           platformatic_config_path: ./platformatic.db.json
           secrets: DATABASE_URL
         env:
-          DATABASE_URL: ${{ secrets.NEON_DB_URL_PRODUCTION }}
-          PLT_SERVER_LOGGER_LEVEL: info
-          PORT: 3042
           PLT_SERVER_HOSTNAME: 127.0.0.1
+          PORT: 3001
+          PLT_SERVER_LOGGER_LEVEL: info
+          DATABASE_URL: ${{ secrets.NEON_DB_URL_PRODUCTION }}
           PLT_JWT_SECRET: 90D725DED39207A2A995BD860907F4CC70A7508E96BEC9C6C8C856A0AB74DEE1
           PLT_WEB_DOMAIN: https://daftaron.com/
           PLT_ADMIN_SECRET: secret

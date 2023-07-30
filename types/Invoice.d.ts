@@ -4,13 +4,13 @@
  */
 declare interface Invoice {
     id?: number;
-    createdAt: string;
+    createdAt?: string | null;
     invoiceDate: string;
     invoiceDueDate: string;
     invoiceHash: string;
     invoiceStatus: string;
     memberId: number;
     payingMemberId: number;
-    updatedAt: string;
+    updatedAt?: string | null;
 }
 export { Invoice };
