@@ -23,7 +23,7 @@ jobs:
         uses: platformatic/onestep@latest
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          platformatic_workspace_id: ${{ secrets.PLATFORMATIC_STATIC_WORKSPACE_ID }}
+          platformatic_workspace_id: d8b26c5e-2d26-43c0-8317-7836d5319f8f
           platformatic_workspace_key: ${{ secrets.PLATFORMATIC_STATIC_WORKSPACE_API_KEY }}
           platformatic_config_path: ./platformatic.db.json
           secrets: DATABASE_URL
